@@ -1,0 +1,1016 @@
+PetCare Scheduler Graded Project
+Strong Progress!
+Congratulations on successfully completing this assignment! Your grade has been recorded. Feel free to close this tab and return to the main course page.
+
+Required passing grade: 70%
+
+Status:Passed
+
+Final Score: 38 / 50 (76%)
+
+76%
+
+Provide Assignment Feedback
+Question 1
+Score: 3/5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Per the rubric, the correct level is the criterion that notes: class with attributes, constructor, and addAppointment provided but not all required setters/getters implemented. Evidence: constructor "public Pet(...)", getters like "public String getPetID() { return petID; }", and addAppointment method "public void addAppointment(Appointment appointment) { this.appointments.add(appointment); }". No setter methods appear in the code, so full credit for having all setters/getters (5 points) is not warranted. That maps to the 3-point criterion.
+
+
+
+Add setter methods for the attributes (e.g. setPetID, setName, setSpecies, setAge, setOwnerName, setOwnerAddress). 2) Add explicit contact fields if required (phone/email) and corresponding getters/setters. 3) Add simple validation in setters (e.g. non-null/length checks, non-negative age). 4) Optionally add serialVersionUID for Serializable and consider immutability or defensive copies for the appointments list (return unmodifiableList or a copy).
+
+
+Score: 3/5 (60%)
+
+
+Detailed Breakdown:
+
+
+Analysis: The student provided a complete Pet class with these elements: a constructor "public Pet(String petID, String name, String species, int age, String ownerName, String ownerAddress) { ... }", attributes including "private String petID;", "private String ownerAddress;", and the appointments collection "private List appointments;" which is initialized with "this.appointments = new ArrayList<>();". Getters are present such as "public String getPetID() { return petID; }" and "public List getAppointments() { return appointments; }". The add-appointment behavior is implemented: "public void addAppointment(Appointment appointment) { this.appointments.add(appointment); }". Missing: there are no setter methods (no "setPetID(...)", "setName(...)" etc.), and there is no explicit contact-info field beyond ownerAddress (e.g. phone/email) which the assignment asked for.
+
+
+Evaluation: Meets many requirements: attributes (pet id, name, species, age, owner name, owner address, registration date, appointments collection) are present, constructor exists, getters implemented, and addAppointment provided. Falls short because setters are not implemented and explicit contact info (phone/email) is not present.
+
+
+Explanation: Per the rubric, the correct level is the criterion that notes: class with attributes, constructor, and addAppointment provided but not all required setters/getters implemented. Evidence: constructor "public Pet(...)", getters like "public String getPetID() { return petID; }", and addAppointment method "public void addAppointment(Appointment appointment) { this.appointments.add(appointment); }". No setter methods appear in the code, so full credit for having all setters/getters (5 points) is not warranted. That maps to the 3-point criterion.
+
+
+Guidance: 1) Add setter methods for the attributes (e.g. setPetID, setName, setSpecies, setAge, setOwnerName, setOwnerAddress). 2) Add explicit contact fields if required (phone/email) and corresponding getters/setters. 3) Add simple validation in setters (e.g. non-null/length checks, non-negative age). 4) Optionally add serialVersionUID for Serializable and consider immutability or defensive copies for the appointments list (return unmodifiableList or a copy).
+
+Question 2
+Score: 4/4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I awarded 4/4 because the submission matches the rubric criterion that requires: attributes for appointment type, date, time and notes; constructors; all getters and setters; and an overridden toString. Specific observations: "private String appointmentType;" and "private String notes;" confirm attributes; constructors shown as "public Appointment(String appointmentType, LocalDate date, LocalTime time)" and "public Appointment(...,String notes)"; all getter/setter method signatures are present; toString is overridden ("@Override public String toString() { return "Date: " + this.date + ... }"). These directly match the highest-level rubric description.
+
+
+
+Replace equals(Appointment) with an override equals(Object) and provide a matching hashCode to follow Java contract. 2) Add a serialVersionUID when implementing Serializable. 3) Add null checks or input validation in constructors/setters to make the class more robust. 4) Consider documenting methods with JavaDoc and making the class immutable if appropriate (e.g., remove setters and use final fields) depending on requirements.
+
+
+Score: 4/4 (100%)
+
+
+Detailed Breakdown:
+
+
+Analysis: The student provided a complete Appointment class. Evidence: attribute declarations "private String appointmentType;", "private LocalDate date;", "private LocalTime time;", "private String notes;"; two constructors present (one with notes and one without) as shown by lines like "public Appointment(String appointmentType, LocalDate date, LocalTime time)" and "public Appointment(..., String notes)"; getters and setters for all fields exist (e.g., "public LocalDate getDate()", "public void setDate(LocalDate date)", "public String getAppointmentType()", "public void setAppointmentType(String appointmentType)", "public LocalTime getTime()", "public void setTime(LocalTime time)", "public String getNotes()", "public void setNotes(String notes)"); toString is overridden: "@Override public String toString() { return "Date: " + this.date + ... }". An equals(Appointment appointment) method is present but uses a specific Appointment parameter rather than the standard equals(Object).
+
+
+Evaluation: Meets the highest rubric criterion: all required attributes are present; constructors provided; all required getters and setters implemented; toString overridden. One minor correctness/style issue: equals is implemented with signature equals(Appointment) instead of overriding equals(Object) and hashCode, but this does not affect the rubric criterion about getters/setters and toString.
+
+
+Explanation: I awarded 4/4 because the submission matches the rubric criterion that requires: attributes for appointment type, date, time and notes; constructors; all getters and setters; and an overridden toString. Specific observations: "private String appointmentType;" and "private String notes;" confirm attributes; constructors shown as "public Appointment(String appointmentType, LocalDate date, LocalTime time)" and "public Appointment(...,String notes)"; all getter/setter method signatures are present; toString is overridden ("@Override public String toString() { return "Date: " + this.date + ... }"). These directly match the highest-level rubric description.
+
+
+Guidance: 1) Replace equals(Appointment) with an override equals(Object) and provide a matching hashCode to follow Java contract. 2) Add a serialVersionUID when implementing Serializable. 3) Add null checks or input validation in constructors/setters to make the class more robust. 4) Consider documenting methods with JavaDoc and making the class immutable if appropriate (e.g., remove setters and use final fields) depending on requirements.
+
+Question 3
+Score: 1/1
+
+
+java.util.Date and java.util.Time
+LocalDateTime
+That's correct!
+Create a new class AppointmentTime with Date and time attributes
+That's correct!
+
+Question 4
+Score: 2/2
+
+
+
+
+The student explicitly wrote "
+
+DateTimeFormatter
+
+", which matches the rubric criterion that the response correctly identifies DateTimeFormatter as the formatting class for LocalDateTime.
+
+Add one or two sentences or a one-line code example showing usage, e.g. mention java.time.format.DateTimeFormatter and DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(localDateTime).
+
+
+Score: 2/2 (100%)
+
+
+Detailed Breakdown:
+
+
+Analysis: The student's entire response is the HTML snippet "
+
+DateTimeFormatter
+
+" which directly names the class used to format LocalDateTime. There is no additional explanation, context, or example.
+
+Evaluation: Meets expectation: the response correctly identifies the class used to format LocalDateTime but is minimal in detail.
+
+
+Explanation: The student explicitly wrote "
+
+DateTimeFormatter
+
+", which matches the rubric criterion that the response correctly identifies DateTimeFormatter as the formatting class for LocalDateTime.
+
+Guidance: Add one or two sentences or a one-line code example showing usage, e.g. mention java.time.format.DateTimeFormatter and DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(localDateTime).
+
+Question 5
+Score: 3/3
+
+
+
+
+
+
+
+
+3 points awarded because the response explicitly contains both "Scanner" and "System.in" (e.g. "new Scanner(System.in)"). The rubric only checks for presence, not correctness of subsequent calls.
+
+
+Replace the second line with either: String userInput = scanner.nextLine(); or int value = scanner.nextInt(); (no System.in argument). Also remember to close the scanner when finished (scanner.close()).
+
+
+Score: 3/3 (100%)
+
+
+Detailed Breakdown:
+
+
+Analysis: Correct use: "private static Scanner scanner = new Scanner(System.in);". Problematic line: "String userInput=scanner.nextInt(System.in);" — nextInt() takes no InputStream argument and returns an int; assigning that to a String is a type error.
+
+
+Evaluation: Meets the rubric requirement fully (Scanner and System.in are present) -> 3/3. Code will not compile/run as written due to incorrect API usage and type mismatch.
+
+
+Explanation: 3 points awarded because the response explicitly contains both "Scanner" and "System.in" (e.g. "new Scanner(System.in)"). The rubric only checks for presence, not correctness of subsequent calls.
+
+
+Guidance: Replace the second line with either: String userInput = scanner.nextLine(); or int value = scanner.nextInt(); (no System.in argument). Also remember to close the scanner when finished (scanner.close()).
+
+Question 6
+Score: 3/3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Awarded full points (3/3) because the student code: 1) uses switch-case structure covering options "1" to "6", 2) calls the corresponding action methods (evidence: "registerPet();", "logAppointment();", "generateReports();", "savePetsToFile();"), and 3) places break statements after actions (evidence: multiple occurrences of "break;" following each case). Example evidence: "case "1": registerPet(); break;", "case "6": savePetsToFile(); running = false; System.out.println("Data saved. Goodbye!"); break;".
+
+
+
+Implement the invoked methods (registerPet, logAppointment, etc.) and ensure they perform the required tasks. 2) Declare and close the Scanner (scanner) resource to avoid leaks. 3) Add input validation (trim, maybe parse to int) and handle exceptions around IO/parse operations. 4) Consider switching on an int for clearer numeric semantics or validate string input strictly before the switch.
+
+
+Score: 3/3 (100%)
+
+
+Detailed Breakdown:
+
+
+Analysis: The submitted code shows a switch(choice) with cases "1" through "6". Each case invokes an action method (registerPet(), logAppointment(), displayPetsAndAppointmentsList(), displayPetAppointments(), generateReports(), savePetsToFile()) and includes a break. The exit case ("6") also sets running = false and prints a goodbye message. The snippet begins by calling loadPetsFromFile() and reads user input via scanner.nextLine(). A default branch prints "Invalid choice. Please select 1-6.".
+
+
+Evaluation: Meets the highest rubric criterion: the switch statement handles each listed action (Register Pet, Schedule Appointment, Display Data, Generate Reports, Save & Exit) and uses appropriate break statements after invoking each action. The code also includes a default case for invalid input.
+
+
+Explanation: Awarded full points (3/3) because the student code: 1) uses switch-case structure covering options "1" to "6", 2) calls the corresponding action methods (evidence: "registerPet();", "logAppointment();", "generateReports();", "savePetsToFile();"), and 3) places break statements after actions (evidence: multiple occurrences of "break;" following each case). Example evidence: "case "1": registerPet(); break;", "case "6": savePetsToFile(); running = false; System.out.println("Data saved. Goodbye!"); break;".
+
+
+Guidance: 1) Implement the invoked methods (registerPet, logAppointment, etc.) and ensure they perform the required tasks. 2) Declare and close the Scanner (scanner) resource to avoid leaks. 3) Add input validation (trim, maybe parse to int) and handle exceptions around IO/parse operations. 4) Consider switching on an int for clearer numeric semantics or validate string input strictly before the switch.
+
+Question 7
+Score: 2/3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I awarded 2/3 because the submission includes at least one required validation (duplicate ID check: "pets.containsKey(id)"), which qualifies as "some required validations." It does not include full validation coverage (e.g., safe parsing of age, empty-field checks, input error handling), so it cannot receive full credit.
+
+
+
+After scanner.nextInt(), consume the rest of the line (e.g., call scanner.nextLine()) before reading subsequent nextLine() inputs, or read all input with nextLine() and parse integers. 2) Add try/catch (InputMismatchException / NumberFormatException) around numeric parsing to handle invalid input. 3) Validate required string fields are non-empty (trim and check length). 4) Validate age range (e.g., non-negative, within sensible bounds). 5) Consider centralizing validation and returning clear user prompts on invalid input.
+
+
+Score: 2/3 (67%)
+
+
+Detailed Breakdown:
+
+
+Analysis: The student provided a complete registerPet() method that: prompts for ID, checks duplicates, reads name/species/age/owner info, constructs a Pet, stores it in a map, and prints the registration date. Specific observed code: "if (pets.containsKey(id)) { System.out.println("Error: PET ID already exists."); return; }" shows a uniqueness validation. However, there are missing/fragile validations: the code uses "int age = scanner.nextInt();" followed immediately by "String ownerName = scanner.nextLine().trim();" which commonly causes ownerName to capture the leftover newline (leading to an empty ownerName). There is no try/catch for non-integer age input, no checks for empty name/species/owner fields, and no validation of age range or registration date errors.
+
+
+Evaluation: Meets some validation requirements (unique ID) but lacks other required validations and robust input handling. The presence of a uniqueness check indicates partial compliance, but missing input-type handling, empty-field checks, and exception handling mean the implementation is not fully validated as required.
+
+
+Explanation: I awarded 2/3 because the submission includes at least one required validation (duplicate ID check: "pets.containsKey(id)"), which qualifies as "some required validations." It does not include full validation coverage (e.g., safe parsing of age, empty-field checks, input error handling), so it cannot receive full credit.
+
+
+Guidance: 1) After scanner.nextInt(), consume the rest of the line (e.g., call scanner.nextLine()) before reading subsequent nextLine() inputs, or read all input with nextLine() and parse integers. 2) Add try/catch (InputMismatchException / NumberFormatException) around numeric parsing to handle invalid input. 3) Validate required string fields are non-empty (trim and check length). 4) Validate age range (e.g., non-negative, within sensible bounds). 5) Consider centralizing validation and returning clear user prompts on invalid input.
+
+Question 8
+Score: 3/4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Score of 3/4 because the submission "includes some of the required validations" (pet existence, date/time parse, parse-exception handling, duplicate detection, future-date check) and it "includes the code to add the appointment to the collection in the respective pet object" (criterion matched). It does not satisfy the highest-level criterion because it does not fully implement all required validations (24‑hour advance and appointmentType validation are missing or incorrect).
+
+
+
+Enforce the 24‑hour rule by combining date and time into a LocalDateTime appointmentDateTime and checking appointmentDateTime.isAfter(LocalDateTime.now().plusHours(24)). 2) Validate appointmentType against the allowed set (e.g., Set.of("visit","vaccination","grooming","accident")). 3) Decide whether duplicate prevention should be per-pet or global and adjust the duplicate-check loop accordingly. 4) Improve user messages and handle edge cases (e.g., same-day appointments but >24 hours vs. <24 hours). 5) Add unit tests for parsing, validation failures, and successful add.
+
+
+Score: 3/4 (75%)
+
+
+Detailed Breakdown:
+
+
+Analysis: Observed that the method reads petId, looks up the pet, prompts for appointmentType/date/time/notes, parses date and time with DateTimeFormatter, catches DateTimeParseException, ensures the date is after LocalDate.now(), scans all existing appointments to prevent identical date+time collisions, and calls pet.addAppointment(appointment) and pets.put(petId, pet). Missing or weak areas: appointmentType values are not validated against allowed types; the '24 hrs' requirement is not implemented correctly (the code checks only date.isAfter(LocalDate.now()) which doesn't ensure 24 hours lead-time and ignores time-of-day); duplicate logic prevents any pet from using the same date/time (might be intended, but should be verified); messages contain typos and could be clearer; parsing and validation are inside try/catch for date parsing but time/date combination checks could be improved.
+
+
+Evaluation: Meets many of the assignment's functional requirements: parsing/formatting, existence check, duplicate check, add-to-collection, and parse-exception handling. Falls short of 'all required validations' because it does not validate appointmentType values and does not correctly enforce the 24‑hour advance rule (only compares dates, not full date-time or 24‑hour threshold).
+
+
+Explanation: Score of 3/4 because the submission "includes some of the required validations" (pet existence, date/time parse, parse-exception handling, duplicate detection, future-date check) and it "includes the code to add the appointment to the collection in the respective pet object" (criterion matched). It does not satisfy the highest-level criterion because it does not fully implement all required validations (24‑hour advance and appointmentType validation are missing or incorrect).
+
+
+Guidance: 1) Enforce the 24‑hour rule by combining date and time into a LocalDateTime appointmentDateTime and checking appointmentDateTime.isAfter(LocalDateTime.now().plusHours(24)). 2) Validate appointmentType against the allowed set (e.g., Set.of("visit","vaccination","grooming","accident")). 3) Decide whether duplicate prevention should be per-pet or global and adjust the duplicate-check loop accordingly. 4) Improve user messages and handle edge cases (e.g., same-day appointments but >24 hours vs. <24 hours). 5) Add unit tests for parsing, validation failures, and successful add.
+
+Question 9
+Score: 2/7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Score = 2 because the code implements two full required displays (per-pet appointments and upcoming appointments for all pets). It does not present an overall report-selection UI or list all registered pets, so it cannot match higher rubric levels that require three+ displays or a user choice to select among reports. Specific evidence: the Pet ID prompt (System.out.print("Enter Pet ID: ")) shows per-pet input, and the generateReports() block prints the upcoming-week header. There is no method or loop that prints all pets' names as a separate 'All registered pets' report.
+
+
+
+Add a simple menu (e.g., numbered choices) so the user can choose: list all pets, show pet appointments, upcoming appointments, or past history. 2) Implement and print "All registered pets" by iterating pets.values() and printing identifiers/names. 3) Consolidate report logic into one handler that calls the appropriate helper based on the menu choice. 4) Fix/clarify date logic and comments (your comment mentions 6 months but code uses minusMonths(2); decide on the correct interval and simplify the boolean conditions). 5) Add unit tests or sample runs to show each report output.
+
+
+Score: 2/7 (29%)
+
+
+Detailed Breakdown:
+
+
+Analysis: The submission includes two methods: displayPetAppointments() and generateReports(). Evidence for per-pet display: System.out.print("Enter Pet ID: ") and Pet pet = pets.get(id); then a loop: for (Appointment a : pet.getAppointments()) { ... } which prints appointments and a history block that checks a.getDate().isBefore(LocalDate.now()). Evidence for upcoming appointments across all pets: System.out.println("\nPets with upcoming appointments in the next week:"); followed by for (Pet p : pets.values()) { for (Appointment a : p.getAppointments()) { LocalDate nextWeek = a.getDate().plusDays(7); if (a.getDate().isBefore(nextWeek) && a.getDate().isAfter(LocalDate.now())) { System.out.println(...); } } }. Missing: no routine that prints "All registered pets" (a full list of pets) and no top-level user choice/menu to select which of the four reports to run.
+
+
+Evaluation: Meets 2 of 4 display requirements clearly: (1) Appointments for a specific pet — implemented in displayPetAppointments(); (2) Upcoming appointments for all pets — implemented in generateReports(). Partially meets past-history requirement only within the per-pet flow (history printed for the selected pet). Does not implement an explicit "All registered pets" listing and does not present a user menu to choose report type.
+
+
+Explanation: Score = 2 because the code implements two full required displays (per-pet appointments and upcoming appointments for all pets). It does not present an overall report-selection UI or list all registered pets, so it cannot match higher rubric levels that require three+ displays or a user choice to select among reports. Specific evidence: the Pet ID prompt (System.out.print("Enter Pet ID: ")) shows per-pet input, and the generateReports() block prints the upcoming-week header. There is no method or loop that prints all pets' names as a separate 'All registered pets' report.
+
+
+Guidance: 1) Add a simple menu (e.g., numbered choices) so the user can choose: list all pets, show pet appointments, upcoming appointments, or past history. 2) Implement and print "All registered pets" by iterating pets.values() and printing identifiers/names. 3) Consolidate report logic into one handler that calls the appropriate helper based on the menu choice. 4) Fix/clarify date logic and comments (your comment mentions 6 months but code uses minusMonths(2); decide on the correct interval and simplify the boolean conditions). 5) Add unit tests or sample runs to show each report output.
+
+Question 10
+Score: 2/3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Awarded 2/3 because the submission writes the entire pets map to a file and catches IOException (evidence: "out.writeObject(pets);" and "catch (IOException e) {...}"). It does not perform an empty/null check of the pets collection (no "if (pets == null || pets.isEmpty())"), which prevents the full 3 points per the rubric.
+
+
+
+Add a null/empty check: if (pets == null || pets.isEmpty()) { /* optionally log or skip save */ }.
+
+Use try-with-resources to auto-close the stream: try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("pets.ser"))) { out.writeObject(pets); }
+
+Optionally catch/handle NotSerializableException to give clearer feedback if an object in the graph isn't serializable.
+
+Add a confirmation message on successful save and consider validating that appointments are included in the serialized structure.
+
+
+Score: 2/3 (67%)
+
+
+Detailed Breakdown:
+
+
+Analysis: The student creates an ObjectOutputStream and writes the pets collection: "ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("pets.ser"));" and "out.writeObject(pets);". They close the stream with "out.close();" and catch IOException: "catch (IOException e) { System.out.println("Error saving data: " + e.getMessage()); }". There is no check like "if (pets == null || pets.isEmpty())" and no use of try-with-resources. Also there is no explicit handling or messaging for serialization-specific errors (e.g., NotSerializableException) or confirmation on success.
+
+
+Evaluation: Meets the core requirement to serialize and save the pets collection and handles I/O exceptions via a catch(IOException). However it does not guard against an empty or null pets collection and could improve robustness (resource handling and more specific exception handling).
+
+
+Explanation: Awarded 2/3 because the submission writes the entire pets map to a file and catches IOException (evidence: "out.writeObject(pets);" and "catch (IOException e) {...}"). It does not perform an empty/null check of the pets collection (no "if (pets == null || pets.isEmpty())"), which prevents the full 3 points per the rubric.
+
+
+Guidance: 1) Add a null/empty check: if (pets == null || pets.isEmpty()) { /* optionally log or skip save */ }.
+2) Use try-with-resources to auto-close the stream: try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("pets.ser"))) { out.writeObject(pets); }
+3) Optionally catch/handle NotSerializableException to give clearer feedback if an object in the graph isn't serializable.
+4) Add a confirmation message on successful save and consider validating that appointments are included in the serialized structure.
+
+Question 11
+Score: 4/4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Score of 4/4 awarded because the submission: (1) shows the collection being populated — evidenced by "pets = (Map<String, Pet>) in.readObject();", (2) handles file-not-found and other I/O/class-not-found errors — evidenced by the two catch blocks shown, and (3) prints a success message — evidenced by "System.out.println("pets data loaded.");". These map directly to the top rubric criterion.
+
+
+Improvements: (1) Validate the runtime type before casting (e.g., check instanceof) or catch ClassCastException to avoid a crash if the file contents differ. (2) Log stack traces when catching IOException/ClassNotFoundException to aid debugging instead of only printing e.getMessage(). (3) Consider reinitializing pets to an empty map explicitly when FileNotFoundException occurs so state is clear.
+
+
+Score: 4/4 (100%)
+
+
+Detailed Breakdown:
+
+
+Analysis: Observed code uses try-with-resources to open an ObjectInputStream: "new ObjectInputStream(new FileInputStream("pets.ser"))". It assigns the read object back into the collection: "pets = (Map<String, Pet>) in.readObject();" and prints a confirmation: "System.out.println("pets data loaded.");". Errors are handled with specific catches: "catch (FileNotFoundException e) { ... System.out.println("No saved data found. Starting fresh."); }" and "catch (IOException | ClassNotFoundException e) { System.out.println("Error loading data: " + e.getMessage()); }". The code also includes "@SuppressWarnings("unchecked")" for the cast.
+
+
+Evaluation: Meets the rubric's highest level: the collection is populated via readObject assignment, all expected I/O and class-loading exceptions are caught, and a console message is printed after successful load. The only minor risk is the unchecked runtime cast (ClassCastException) which is not explicitly handled, but this does not negate the required behaviors listed in the rubric.
+
+
+Explanation: Score of 4/4 awarded because the submission: (1) shows the collection being populated — evidenced by "pets = (Map<String, Pet>) in.readObject();", (2) handles file-not-found and other I/O/class-not-found errors — evidenced by the two catch blocks shown, and (3) prints a success message — evidenced by "System.out.println("pets data loaded.");". These map directly to the top rubric criterion.
+
+
+Guidance: Improvements: (1) Validate the runtime type before casting (e.g., check instanceof) or catch ClassCastException to avoid a crash if the file contents differ. (2) Log stack traces when catching IOException/ClassNotFoundException to aid debugging instead of only printing e.getMessage(). (3) Consider reinitializing pets to an empty map explicitly when FileNotFoundException occurs so state is clear.
+
+Question 12
+Score: 2/3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Score = 2 because:
+
+
+
+Evidence that both reports are present: the student prints "\nPets with upcoming appointments in the next week:" and "\nPets overdue for the vetvisit".
+
+Evidence there is no user input: the method signature is "private static void generateReports() {" and there is no parameter or input prompt anywhere in the provided code.
+
+Evidence of incorrect logic: "LocalDate nextWeek = a.getDate().plusDays(7);" (should be based on now) and "LocalDate twoMonthsBefore = LocalDate.now().minusMonths(2);" (should be 6 months). These issues cause incorrect detection of upcoming and overdue appointments.
+
+
+Concrete fixes:
+
+
+
+Add user input or a parameter to choose which report to run (e.g., pass an int option or prompt Scanner for choice).
+
+Fix upcoming-appointment logic: use LocalDate now = LocalDate.now(); if (a.getDate().isAfter(now) && a.getDate().isBefore(now.plusDays(7))) { ... }
+
+Fix overdue logic: use LocalDate threshold = LocalDate.now().minusMonths(6); consider a pet with no appointments as overdue, or if lastAppointment.isBefore(threshold) then it's overdue.
+
+Move empty-appointments checks out of per-appointment loops: check per pet whether appointments.isEmpty() once, and print a single clear message per pet.
+
+Add unit tests or small sample data to verify outputs for edge cases (appointment exactly today, exactly 7 days ahead, exactly 6 months ago).
+
+
+Score: 2/3 (67%)
+
+
+Detailed Breakdown:
+
+
+Analysis: What I observed:
+
+
+
+The student provided a full method: "private static void generateReports() {" — there is no parameter or user input handling to choose a report.
+
+Both report sections are present: the header "\nPets with upcoming appointments in the next week:" and later "\nPets overdue for the vetvisit".
+
+Bug in upcoming-appointments logic: the code sets "LocalDate nextWeek = a.getDate().plusDays(7);" and then checks "a.getDate().isBefore(nextWeek) && a.getDate().isAfter(LocalDate.now())". Because nextWeek is computed from the appointment date, that comparison will almost always be true and does not test whether the appointment is within the next 7 days from today. The correct check is to compare the appointment date against "LocalDate.now().plusDays(7)".
+
+Overdue logic is incorrect: the code uses "LocalDate twoMonthsBefore = LocalDate.now().minusMonths(2);" but the requirement is '> 6 months'. Also the condition "if (!a.getDate().isAfter(twoMonthsBefore) && !a.getDate().isBefore(LocalDate.now()))" is confusing and likely wrong for detecting appointments older than the threshold.
+
+Repeated/inefficient messaging: empty-appointment checks are inside loops and print per-appointment or per-pet in ways that will create confusing output.
+
+No user input handling to select which of the two reports to generate.
+
+
+Evaluation: Meets parts of the requirement: both report types are implemented in code (upcoming and overdue), but the method does not accept or process user input to choose which report to run and contains logical/date-comparison errors that will produce incorrect results. According to the rubric, this corresponds to "addresses the generation of both reports, but doesn't take any user input."
+
+
+Explanation: Score = 2 because:
+
+
+
+Evidence that both reports are present: the student prints "\nPets with upcoming appointments in the next week:" and "\nPets overdue for the vetvisit".
+
+Evidence there is no user input: the method signature is "private static void generateReports() {" and there is no parameter or input prompt anywhere in the provided code.
+
+Evidence of incorrect logic: "LocalDate nextWeek = a.getDate().plusDays(7);" (should be based on now) and "LocalDate twoMonthsBefore = LocalDate.now().minusMonths(2);" (should be 6 months). These issues cause incorrect detection of upcoming and overdue appointments.
+
+
+Guidance: Concrete fixes:
+
+
+
+Add user input or a parameter to choose which report to run (e.g., pass an int option or prompt Scanner for choice).
+
+Fix upcoming-appointment logic: use LocalDate now = LocalDate.now(); if (a.getDate().isAfter(now) && a.getDate().isBefore(now.plusDays(7))) { ... }
+
+Fix overdue logic: use LocalDate threshold = LocalDate.now().minusMonths(6); consider a pet with no appointments as overdue, or if lastAppointment.isBefore(threshold) then it's overdue.
+
+Move empty-appointments checks out of per-appointment loops: check per pet whether appointments.isEmpty() once, and print a single clear message per pet.
+
+Add unit tests or small sample data to verify outputs for edge cases (appointment exactly today, exactly 7 days ahead, exactly 6 months ago).
+
+Question 13
+Score: 3/3
+
+
+
+
+
+
+
+
+
+
+
+
+
+I awarded full points because the student listed menu options that correspond to each rubric item and included the prompt "Choose an option:" which fulfills the requirement to accept user input. Although phrasing differs slightly and display options are split into two entries, the essential menu features (Register, Schedule, Display, Generate Reports, Save & Exit) are all present in the output.
+
+
+
+Standardize menu labels to match the assignment exactly (e.g., "Register Pet", "Schedule Appointment", "Display Records", "Generate Reports", "Save & Exit"). 2) Remove or consolidate redundant items (combine options 3 and 4 into a single "Display Records" item). 3) Show an example interaction: after "Choose an option:" show a sample input (e.g., user types "2") and the program's immediate response to demonstrate input handling. 4) Keep capitalization and spacing consistent for a cleaner user interface.
+
+
+Score: 3/3 (100%)
+
+
+Detailed Breakdown:
+
+
+Analysis: The student's output shows a menu titled "=== Pet Care scheduler ===" and lists numbered options 1 through 6: "1. Register pets", "2. Schedule appointments", "3. display pets list and appointment lists", "4. Display petAppointments", "5. Generate Reports", "6. Save and Exit" followed by "Choose an option:". This indicates the menu items are present and a prompt for input is displayed. Wording differs slightly from the rubric (pluralization and phrasing such as "Register pets" vs "Register Pet", and there is some redundancy between options 3 and 4). No actual user input value or subsequent program response is shown.
+
+
+Evaluation: Completeness: All required functions from the rubric are present (register, schedule, display, reports, save/exit). Accuracy: Wording varies and there is redundancy in display-related options. Input handling: The prompt "Choose an option:" is present, satisfying the requirement to accept user input in the menu output, but no example input or processing is shown.
+
+
+Explanation: I awarded full points because the student listed menu options that correspond to each rubric item and included the prompt "Choose an option:" which fulfills the requirement to accept user input. Although phrasing differs slightly and display options are split into two entries, the essential menu features (Register, Schedule, Display, Generate Reports, Save & Exit) are all present in the output.
+
+
+Guidance: 1) Standardize menu labels to match the assignment exactly (e.g., "Register Pet", "Schedule Appointment", "Display Records", "Generate Reports", "Save & Exit"). 2) Remove or consolidate redundant items (combine options 3 and 4 into a single "Display Records" item). 3) Show an example interaction: after "Choose an option:" show a sample input (e.g., user types "2") and the program's immediate response to demonstrate input handling. 4) Keep capitalization and spacing consistent for a cleaner user interface.
+
+Question 14
+Score: 2/3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Score of 2 awarded because the response: (1) shows inputs for ID, name, species, and age and (2) prints a registration confirmation. It falls short of full marks because the owner name/contact information is not clearly captured or shown — the owner name prompt is empty and the address appears concatenated, so not all required details were accepted and displayed.
+
+
+
+Fix the owner-name input handling so a non-empty owner name is captured and displayed. 2) Separate prompts and outputs for owner name and owner address/contact. 3) Add input validation that re-prompts or warns on empty required fields. 4) Show a concise summary listing every captured field (ID, name, species/breed, age, owner name, owner contact) before the confirmation message.
+
+
+Score: 2/3 (67%)
+
+
+Detailed Breakdown:
+
+
+Analysis: The student output includes prompts and values: "Enter pet ID: 001", "Enter pet name: Milo", "Enter pet species: Dog", "Enter pet's age: 2", and a confirmation line "Pet registered successfully on 2025-09-06". However the owner name prompt appears empty: "Enter pet's owner name: Enter pet's owner address: STephen/CabberyRoad" — indicating the owner name was not captured separately and the address text is concatenated directly after the owner name prompt.
+
+
+Evaluation: Meets the rubric level for showing the pet being registered after accepting some details (score 2/3). The program demonstrates input capture for most fields and prints a success confirmation, but it does not correctly accept/display the owner's name/contact as a distinct captured field, so it does not meet the 'all details' criterion for full credit.
+
+
+Explanation: Score of 2 awarded because the response: (1) shows inputs for ID, name, species, and age and (2) prints a registration confirmation. It falls short of full marks because the owner name/contact information is not clearly captured or shown — the owner name prompt is empty and the address appears concatenated, so not all required details were accepted and displayed.
+
+
+Guidance: 1) Fix the owner-name input handling so a non-empty owner name is captured and displayed. 2) Separate prompts and outputs for owner name and owner address/contact. 3) Add input validation that re-prompts or warns on empty required fields. 4) Show a concise summary listing every captured field (ID, name, species/breed, age, owner name, owner contact) before the confirmation message.
+
+Question 15
+Score: 2/2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Awarded full points because the output shows the program accepting all appointment details and concludes with a confirmation. Evidence: prompts and entries such as "Enter pet ID: 001", "visit", "09/10/2025", "09:12:12", and the confirmation "The appointment has been added to the appointmentList" directly match the rubric requirement for correctly showing the appointment being scheduled after accepting details.
+
+
+
+After confirmation, print the saved appointment record (pet ID, type, date, time, notes) so reviewers can verify stored values. 2) Validate and echo input formats (e.g., reject invalid date/time and show error). 3) Show the appointmentList entry or a listing command output to prove persistence.
+
+
+Score: 2/2 (100%)
+
+
+Detailed Breakdown:
+
+
+Analysis: The student output shows selecting the schedule option and provides all required inputs: "Choose an option: 2", "Enter pet ID: 001", the appointment type prompt and response "visit", date "09/10/2025", time "09:12:12", and a final confirmation: "The appointment has been added to the appointmentList". The flow indicates the program accepted the inputs and recorded the appointment, but it does not print the saved appointment details.
+
+
+Evaluation: Meets the rubric's highest criterion: the response demonstrates scheduling an appointment after accepting the required details. Required fields (pet ID, type, date, time, notes prompt) are present and a confirmation message is shown. Missing: a printed summary of the stored appointment for verification.
+
+
+Explanation: Awarded full points because the output shows the program accepting all appointment details and concludes with a confirmation. Evidence: prompts and entries such as "Enter pet ID: 001", "visit", "09/10/2025", "09:12:12", and the confirmation "The appointment has been added to the appointmentList" directly match the rubric requirement for correctly showing the appointment being scheduled after accepting details.
+
+
+Guidance: 1) After confirmation, print the saved appointment record (pet ID, type, date, time, notes) so reviewers can verify stored values. 2) Validate and echo input formats (e.g., reject invalid date/time and show error). 3) Show the appointmentList entry or a listing command output to prove persistence.
+
+
+Report an issue
+Retake Assignment
+
